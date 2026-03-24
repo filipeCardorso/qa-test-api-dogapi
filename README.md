@@ -360,11 +360,6 @@ O projeto possui pipeline **GitHub Actions** que executa automaticamente a cada 
 4. **Allure Report:** Gera e publica em GitHub Pages com request/response HTTP de cada teste
 5. **Artifacts:** Salva o relatório para download (retenção de 30 dias)
 
-### Relatório Online
-
-Após cada execução, o Allure Report fica disponível em:
-**https://filipecardorso.github.io/qa-test-api-dogapi/allure-report**
-
 ## Relatórios
 
 | Tipo | Onde Encontrar | O Que Mostra |
