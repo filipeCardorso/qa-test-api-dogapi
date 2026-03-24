@@ -78,7 +78,7 @@ Retorna uma imagem aleatória de qualquer raça.
 
 ## Cenários de Teste
 
-### GET /breeds/list/all (4 cenários + 4 parametrizados)
+### GET /breeds/list/all (3 cenários + 1 parametrizado x4 raças = 7 execuções)
 
 #### CT-001: Retorna status 200 com status "success"
 | Campo | Descrição |
@@ -357,7 +357,7 @@ O projeto possui pipeline **GitHub Actions** que executa automaticamente a cada 
 1. **Setup:** Configura JDK 17 e Gradle (com cache de dependências)
 2. **Testes:** Executa os 13 cenários
 3. **Relatório de Resultados:** Publica gráficos com contagem de testes (passed/failed/skipped) diretamente no Summary da pipeline
-4. **Allure Report:** Gera e publica em GitHub Pages com request/response HTTP de cada teste
+4. **Allure Report:** Gera relatório e salva como artifact com request/response HTTP de cada teste
 5. **Artifacts:** Salva o relatório para download (retenção de 30 dias)
 
 ## Relatórios
@@ -366,7 +366,7 @@ O projeto possui pipeline **GitHub Actions** que executa automaticamente a cada 
 |------|---------------|-------------|
 | **JUnit (terminal)** | Output do `./gradlew test` | Resultado de cada teste (PASSED/FAILED) |
 | **Pipeline Summary** | GitHub Actions > run > Summary | Gráficos com total de testes, taxa de sucesso, duração |
-| **Allure Report** | GitHub Pages ou `./gradlew allureServe` | Cenários por feature, severidade, request/response HTTP, histórico |
+| **Allure Report** | Artifact no GitHub Actions ou `./gradlew allureServe` | Cenários por feature, severidade, request/response HTTP, histórico |
 
 ## Decisões Técnicas
 
