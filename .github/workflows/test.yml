@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: write
+  checks: write
+  pages: write
+  id-token: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -25,6 +31,14 @@ jobs:
       - name: Run Tests
         run: ./gradlew test
 
+      - name: Test Report
+        if: always()
+        uses: dorny/test-reporter@v2
+        with:
+          name: Test Results
+          path: build/test-results/test/*.xml
+          reporter: java-junit
+
       - name: Generate Allure Report
         if: always()
         run: ./gradlew allureReport
@@ -36,3 +50,11 @@ jobs:
           name: allure-report
           path: build/reports/allure-report
           retention-days: 30
+
+      - name: Deploy Allure to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/reports/allure-report
+          destination_dir: allure-report
