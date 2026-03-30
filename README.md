@@ -1,3 +1,10 @@
+![RestAssured](https://img.shields.io/badge/RestAssured_5-6DB33F?style=flat-square&logo=java&logoColor=white)
+![Java](https://img.shields.io/badge/Java_17-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle_8-02303A?style=flat-square&logo=gradle&logoColor=white)
+![JUnit 5](https://img.shields.io/badge/JUnit_5-25A162?style=flat-square&logo=junit5&logoColor=white)
+![Allure](https://img.shields.io/badge/Allure_Report-FF5722?style=flat-square&logo=allure&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
 # QA Test - API Automation (RestAssured + Java)
 
 Automação de testes para a [Dog API](https://dog.ceo/dog-api/), uma API REST pública que fornece dados e imagens de raças de cães. Desenvolvido como parte de um teste técnico para QA.
